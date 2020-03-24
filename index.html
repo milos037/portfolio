@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sr-rs">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moj Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="style/test.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="section" id="prva">
+        <div class="waveWrapper">
+          <div class="text">
+            <h1>
+              Zdravo, ja sam <span class="izdvoji">Miloš</span>
+              <br />
+              Junior Full Stack Developer
+              <!-- <a href="#druga_sekcija" class="material-icons">arrow_drop_down_circle</a>
+                         -->
+              <a href="#"><span></span></a>
+            </h1>
+          </div>
+          <div class="waveWrapperInner bgMiddle">
+            <div
+              class="wave waveMiddle"
+              style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"
+            ></div>
+          </div>
+          <div class="waveWrapperInner bgBottom">
+            <div
+              class="wave waveBottom"
+              style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="druga_sekcija">O meni</section>
+      <section class="section text-white" id="treca">Projekti</section>
+      <!-- forma -->
+      <section class="section" id="forma">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="neumorphic-card mx-auto">
+              <input
+                class="neumorphic-input"
+                id="ime_prezime"
+                type="text"
+                placeholder="Ime i prezime"
+              />
+              <input
+                class="neumorphic-input"
+                id="email"
+                type="email"
+                placeholder="Email"
+              />
+              <textarea
+                class="neumorphic-input"
+                id="poruka"
+                placeholder="Poruka"
+              ></textarea>
+
+              <button type="button" class="btn neumorphic-btn mt-5 mb-3">
+                Log in
+              </button>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div
+              class="neumorphic-card mx-auto text-justify"
+              style="height: 100%; width: 80%"
+            >
+              <p style="margin:25% auto">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section text-white" id="peta">Footer</section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.5/popper.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("main").fullpage({
+          navigation: true,
+          navigationPosition: "right",
+          resposnive: 300
+        });
+      });
+    </script>
+  </body>
+</html>
