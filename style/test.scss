@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap");
+$svetlo_siva: #6d6d6d;
+
+@import url("https://fonts.googleapis.com/css?family=Rubik:900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @keyframes move_wave {
   0% {
     transform: translateX(0) translateZ(0) scaleY(1);
@@ -37,16 +41,69 @@
     opacity: 0;
   }
 }
+a {
+  color: rgba(65, 67, 69, 0.7);
+  text-decoration: none;
+  transition: all 1s;
 
+  &.link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding: 2px 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      background-color: #333536;
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      color: #333536;
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
 body,
 html {
-  font-family: "Rubik", sans-serif;
+  font-family: "Varela Round", sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: #ebecf0;
+  background-color: #e7e8e9;
 }
+h1,
+h2,
+h3 {
+  font-family: "Rubik", sans-serif;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.5em;
+}
+
+::placeholder {
+  font-weight: 700;
+}
+
 //navigacija full page scrollera
 #fp-nav ul {
   transform: scale(1.5);
@@ -75,7 +132,7 @@ html {
   top: 0;
   margin: auto;
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   //overflow: hidden;
 
   .waveWrapperInner {
@@ -145,26 +202,9 @@ html {
         color: rgba(255, 255, 255, 0.2);
       }
 
-      /*a {
-				display: block;
-				position: absolute;
-				left: 47%;
-				bottom: 20px;
-				font-size: 1em;
-				color: rgba(255, 255, 255, 0.2);	
-				transition: all .7s ease-in-out;
-				text-shadow: -1px 3px 4px #1a1a1a;
-				text-decoration: none;
-
-				&:hover {
-					animation: pulsate-bck 1.5s ease-in-out infinite both;
-					color: darken(rgba(255, 255, 255, 0.2), 20%);
-					
-					transition: all .7s ease-in-out;
-				}
-			}*/
       a {
         padding-top: 60px;
+        cursor: default;
 
         span {
           display: block;
@@ -173,7 +213,7 @@ html {
           bottom: 20px;
           width: 60px;
           height: 100px;
-          border: 3px solid #6d6d6d;
+          border: 3px solid $svetlo_siva;
           box-shadow: -3px 2px 20px rgba(0, 0, 0, 0.4);
           border-radius: 50px;
           box-sizing: border-box;
@@ -186,7 +226,7 @@ html {
             width: 6px;
             height: 6px;
             margin-left: -3px;
-            background-color: #6d6d6d;
+            background-color: $svetlo_siva;
             border-radius: 100%;
             animation: scroll-animacija 2s infinite;
             box-sizing: border-box;
@@ -199,23 +239,197 @@ html {
 main {
   section:not(:first-child) {
     font-weight: bold;
-    text-align: center;
+    text-align: justify;
 
     &:nth-child(odd) {
       background: #262627;
     }
+
+    &#o-meni {
+      img {
+        width: 200px;
+        margin: 0 auto;
+      }
+    }
+  }
+  #projekti-skilovi {
+    h3 {
+      color: $svetlo_siva;
+      font-size: 1.25em;
+    }
+    .neumorphic-progress {
+      margin-bottom: 20px;
+    }
+  }
+  #prednosti {
+    .neumorphic-card__outer {
+      background-color: transparent;
+      border: 0;
+    }
+    .neumorphic-image {
+      width: 150px;
+      height: 100px;
+      text-align: center;
+      padding: 0;
+      .ikonica {
+        font-size: 100px;
+        color: $svetlo_siva;
+        text-shadow: -1px 2px 5px rgba(65, 67, 69, 0.3);
+      }
+    }
+  }
+  #forma {
+    .neumorphic-card {
+      box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000,
+        0 0 4px rgba(255, 255, 255, 0.2) !important;
+      text-align: center;
+    }
+    .neumorphic-input {
+      color: $svetlo_siva;
+      font-weight: bold;
+      box-shadow: inset 0 0 4px rgba(0, 0, 0, 0),
+        inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000,
+        0 0 4px rgba(255, 255, 255, 0.2) !important;
+      border: 0;
+    }
+    .neumorphic-btn {
+      box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000,
+        0 0 4px rgba(255, 255, 255, 0.2) !important;
+      transition: all 2s;
+      opacity: 0.9;
+      &:active {
+        box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.15),
+          -8px -8px 16px #1a1a1a, inset 0 0 4px rgba(255, 255, 255, 0),
+          inset 8px 8px 16px rgba(100, 100, 100, 0.15),
+          inset -8px -8px 16px #1a1a1a, 0 0 4px rgba(128, 128, 128, 0.35) !important;
+        transform: scale(0.95);
+        opacity: 1;
+        transition: all 2s;
+      }
+    }
+    .social {
+      font-size: 50px;
+    }
   }
 }
-::placeholder {
-  font-weight: 500;
-}
+
 //test section
+.neumorphic-outer {
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000,
+    0 0 4px rgba(255, 255, 255, 0.2) !important;
+}
+.neumorphic-inner {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0),
+    inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000,
+    0 0 4px rgba(255, 255, 255, 0.2) !important;
+}
+.neumorphic-image {
+  width: 200px;
+  height: 174px;
+}
+
+.neumorphic-tab-container__control {
+  color: $svetlo_siva;
+}
+.neumorphic-tab-container__control_active {
+  color: lighten($color: $svetlo_siva, $amount: 40%);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0),
+    inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000;
+}
+.neumorphic-progress__back {
+  box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.35), -8px -8px 16px #00000055 !important;
+}
+$width90: 90%;
+$width80: 80%;
+$width70: 70%;
+$width60: 60%;
+.neumorphic-progress__line {
+  height: 16px;
+  margin-top: -16px;
+  background-color: #6d6d6d;
+  border-radius: 8px;
+  opacity: 1;
+  animation-duration: 3s ease;
+
+  @keyframes sliding90 {
+    0% {
+      width: 16px;
+    }
+    100% {
+      width: $width90;
+    }
+  }
+
+  @keyframes sliding80 {
+    0% {
+      width: 16px;
+    }
+    100% {
+      width: $width80;
+    }
+  }
+
+  @keyframes sliding70 {
+    0% {
+      width: 16px;
+    }
+    100% {
+      width: $width70;
+    }
+  }
+
+  @keyframes sliding60 {
+    0% {
+      width: 16px;
+    }
+    100% {
+      width: $width60;
+    }
+  }
+
+  &.html {
+    width: $width90;
+    animation: sliding90;
+  }
+
+  &.css {
+    @extend .html;
+  }
+
+  &.js {
+    width: $width80;
+    animation: sliding80;
+  }
+
+  &.php {
+    width: $width80;
+    animation: sliding80;
+  }
+
+  &.wp {
+    width: $width70;
+    animation: sliding70;
+  }
+  &.ps {
+    @extend .wp;
+  }
+  &.linux {
+    width: $width60;
+    animation: sliding60;
+  }
+}
+.neumorphic-inner div {
+  color: lighten($color: $svetlo_siva, $amount: 40%);
+  font-size: 1.15em;
+}
+
+///
 .neumorphic-card {
   display: block;
   background-color: var(--back-color);
   padding: 40px;
   box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
-    -7px -7px 20px rgba(255, 255, 255, 1), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+    -7px -7px 20px rgba(255, 255, 255, 1), 0px 0px 4px rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   //   max-width: 300px;
   width: min-content;
@@ -243,7 +457,7 @@ textarea {
   border: none;
   padding: 10px 40px;
   border-radius: 40px;
-  color: #6d7587;
+  color: $svetlo_siva;
   background-color: var(--back-color);
   /*box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.3), 
 				-2px -2px 4px 2px rgba(255, 255, 255, 1), 

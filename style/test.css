@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @-webkit-keyframes move_wave {
   0% {
     -webkit-transform: translateX(0) translateZ(0) scaleY(1);
@@ -96,14 +98,92 @@
   }
 }
 
+a {
+  color: rgba(65, 67, 69, 0.7);
+  text-decoration: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+a.link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 2px 0;
+}
+
+a.link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background-color: #333536;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+a.link:hover {
+  color: #333536;
+}
+
+a.link:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
 body,
 html {
-  font-family: "Rubik", sans-serif;
+  font-family: "Varela Round", sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: #ebecf0;
+  background-color: #e7e8e9;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+::-webkit-input-placeholder {
+  font-weight: 700;
+}
+
+:-ms-input-placeholder {
+  font-weight: 700;
+}
+
+::-ms-input-placeholder {
+  font-weight: 700;
+}
+
+::placeholder {
+  font-weight: 700;
 }
 
 #fp-nav ul {
@@ -128,7 +208,7 @@ html {
   top: 0;
   margin: auto;
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
 }
 
 .waveWrapper .waveWrapperInner, .waveWrapper .bgMiddle, .waveWrapper .bgBottom {
@@ -198,24 +278,6 @@ html {
   text-shadow: -1px 2px 5px rgba(65, 67, 69, 0.3);
   -webkit-background-clip: text;
   background-clip: text;
-  /*a {
-				display: block;
-				position: absolute;
-				left: 47%;
-				bottom: 20px;
-				font-size: 1em;
-				color: rgba(255, 255, 255, 0.2);	
-				transition: all .7s ease-in-out;
-				text-shadow: -1px 3px 4px #1a1a1a;
-				text-decoration: none;
-
-				&:hover {
-					animation: pulsate-bck 1.5s ease-in-out infinite both;
-					color: darken(rgba(255, 255, 255, 0.2), 20%);
-					
-					transition: all .7s ease-in-out;
-				}
-			}*/
 }
 
 .waveWrapper div.text h1 .izdvoji {
@@ -224,6 +286,7 @@ html {
 
 .waveWrapper div.text h1 a {
   padding-top: 60px;
+  cursor: default;
 }
 
 .waveWrapper div.text h1 a span {
@@ -259,35 +322,234 @@ html {
 
 main section:not(:first-child) {
   font-weight: bold;
-  text-align: center;
+  text-align: justify;
 }
 
 main section:not(:first-child):nth-child(odd) {
   background: #262627;
 }
 
-::-webkit-input-placeholder {
-  font-weight: 500;
+main section:not(:first-child)#o-meni img {
+  width: 200px;
+  margin: 0 auto;
 }
 
-:-ms-input-placeholder {
-  font-weight: 500;
+main #projekti-skilovi h3 {
+  color: #6d6d6d;
+  font-size: 1.25em;
 }
 
-::-ms-input-placeholder {
-  font-weight: 500;
+main #projekti-skilovi .neumorphic-progress {
+  margin-bottom: 20px;
 }
 
-::placeholder {
-  font-weight: 500;
+main #prednosti .neumorphic-card__outer {
+  background-color: transparent;
+  border: 0;
+}
+
+main #prednosti .neumorphic-image {
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  padding: 0;
+}
+
+main #prednosti .neumorphic-image .ikonica {
+  font-size: 100px;
+  color: #6d6d6d;
+  text-shadow: -1px 2px 5px rgba(65, 67, 69, 0.3);
+}
+
+main #forma .neumorphic-card {
+  -webkit-box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+          box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+  text-align: center;
+}
+
+main #forma .neumorphic-input {
+  color: #6d6d6d;
+  font-weight: bold;
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0), inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+          box-shadow: inset 0 0 4px rgba(0, 0, 0, 0), inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+  border: 0;
+}
+
+main #forma .neumorphic-btn {
+  -webkit-box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+          box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  opacity: 0.9;
+}
+
+main #forma .neumorphic-btn:active {
+  -webkit-box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.15), -8px -8px 16px #1a1a1a, inset 0 0 4px rgba(255, 255, 255, 0), inset 8px 8px 16px rgba(100, 100, 100, 0.15), inset -8px -8px 16px #1a1a1a, 0 0 4px rgba(128, 128, 128, 0.35) !important;
+          box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.15), -8px -8px 16px #1a1a1a, inset 0 0 4px rgba(255, 255, 255, 0), inset 8px 8px 16px rgba(100, 100, 100, 0.15), inset -8px -8px 16px #1a1a1a, 0 0 4px rgba(128, 128, 128, 0.35) !important;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  opacity: 1;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+main #forma .social {
+  font-size: 50px;
+}
+
+.neumorphic-outer {
+  -webkit-box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+          box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+.neumorphic-inner {
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0), inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+          box-shadow: inset 0 0 4px rgba(0, 0, 0, 0), inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+.neumorphic-image {
+  width: 200px;
+  height: 174px;
+}
+
+.neumorphic-tab-container__control {
+  color: #6d6d6d;
+}
+
+.neumorphic-tab-container__control_active {
+  color: lightgray;
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0), inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000;
+          box-shadow: inset 0 0 4px rgba(0, 0, 0, 0), inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000;
+}
+
+.neumorphic-progress__back {
+  -webkit-box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.35), -8px -8px 16px #00000055 !important;
+          box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.35), -8px -8px 16px #00000055 !important;
+}
+
+.neumorphic-progress__line {
+  height: 16px;
+  margin-top: -16px;
+  background-color: #6d6d6d;
+  border-radius: 8px;
+  opacity: 1;
+  -webkit-animation-duration: 3s ease;
+          animation-duration: 3s ease;
+}
+
+@-webkit-keyframes sliding90 {
+  0% {
+    width: 16px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes sliding90 {
+  0% {
+    width: 16px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes sliding80 {
+  0% {
+    width: 16px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes sliding80 {
+  0% {
+    width: 16px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes sliding70 {
+  0% {
+    width: 16px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes sliding70 {
+  0% {
+    width: 16px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes sliding60 {
+  0% {
+    width: 16px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes sliding60 {
+  0% {
+    width: 16px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+.neumorphic-progress__line.html, .neumorphic-progress__line.css {
+  width: 90%;
+  -webkit-animation: sliding90;
+          animation: sliding90;
+}
+
+.neumorphic-progress__line.js {
+  width: 80%;
+  -webkit-animation: sliding80;
+          animation: sliding80;
+}
+
+.neumorphic-progress__line.php {
+  width: 80%;
+  -webkit-animation: sliding80;
+          animation: sliding80;
+}
+
+.neumorphic-progress__line.wp, .neumorphic-progress__line.ps {
+  width: 70%;
+  -webkit-animation: sliding70;
+          animation: sliding70;
+}
+
+.neumorphic-progress__line.linux {
+  width: 60%;
+  -webkit-animation: sliding60;
+          animation: sliding60;
+}
+
+.neumorphic-inner div {
+  color: lightgray;
+  font-size: 1.15em;
 }
 
 .neumorphic-card {
   display: block;
   background-color: var(--back-color);
   padding: 40px;
-  -webkit-box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
-          box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+  -webkit-box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   width: -webkit-min-content;
   width: -moz-min-content;
@@ -316,7 +578,7 @@ textarea {
   border: none;
   padding: 10px 40px;
   border-radius: 40px;
-  color: #6d7587;
+  color: #6d6d6d;
   background-color: var(--back-color);
   /*box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.3), 
 				-2px -2px 4px 2px rgba(255, 255, 255, 1), 
