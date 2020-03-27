@@ -170,6 +170,10 @@ p {
   font-size: 1.5em;
 }
 
+.error {
+  background: #ff00003d !important;
+}
+
 ::-webkit-input-placeholder {
   font-weight: 700;
 }
@@ -375,6 +379,11 @@ main #forma .neumorphic-input {
   border: 0;
 }
 
+main #forma .neumorphic-input:focus {
+  -webkit-box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.15), -8px -8px 16px #1a1a1a, inset 0 0 4px rgba(255, 255, 255, 0), inset 8px 8px 16px rgba(100, 100, 100, 0.15), inset -8px -8px 16px #1a1a1a, 0 0 4px rgba(128, 128, 128, 0.35) !important;
+          box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.15), -8px -8px 16px #1a1a1a, inset 0 0 4px rgba(255, 255, 255, 0), inset 8px 8px 16px rgba(100, 100, 100, 0.15), inset -8px -8px 16px #1a1a1a, 0 0 4px rgba(128, 128, 128, 0.35) !important;
+}
+
 main #forma .neumorphic-btn {
   -webkit-box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
           box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
@@ -393,8 +402,16 @@ main #forma .neumorphic-btn:active {
   transition: all 2s;
 }
 
+main #forma h3 {
+  color: #6d6d6d;
+}
+
 main #forma .social {
   font-size: 50px;
+}
+
+main #forma a:hover {
+  color: #6d6d6d;
 }
 
 .neumorphic-outer {

@@ -99,7 +99,9 @@ h3 {
 p {
   font-size: 1.5em;
 }
-
+.error {
+  background: #ff00003d !important;
+}
 ::placeholder {
   font-weight: 700;
 }
@@ -291,6 +293,13 @@ main {
         inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000,
         0 0 4px rgba(255, 255, 255, 0.2) !important;
       border: 0;
+
+      &:focus {
+        box-shadow: 8px 8px 16px rgba(100, 100, 100, 0.15),
+          -8px -8px 16px #1a1a1a, inset 0 0 4px rgba(255, 255, 255, 0),
+          inset 8px 8px 16px rgba(100, 100, 100, 0.15),
+          inset -8px -8px 16px #1a1a1a, 0 0 4px rgba(128, 128, 128, 0.35) !important;
+      }
     }
     .neumorphic-btn {
       box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000,
@@ -307,8 +316,14 @@ main {
         transition: all 2s;
       }
     }
+    h3 {
+      color: $svetlo_siva;
+    }
     .social {
       font-size: 50px;
+    }
+    a:hover {
+      color: $svetlo_siva;
     }
   }
 }
