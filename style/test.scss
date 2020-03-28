@@ -1,4 +1,4 @@
-$svetlo_siva: #6d6d6d;
+$svetlo_plava: #74b9ff;
 $tablet: 768px;
 $mobile: 414px;
 @mixin tablet {
@@ -53,7 +53,7 @@ $mobile: 414px;
   }
 }
 a {
-  color: rgba(65, 67, 69, 0.7);
+  color: $svetlo_plava;
   text-decoration: none;
   transition: all 1s;
 
@@ -219,7 +219,7 @@ p {
       }
 
       .izdvoji {
-        color: rgba(255, 255, 255, 0.2);
+        color: $svetlo_plava;
       }
 
       a {
@@ -237,7 +237,7 @@ p {
           bottom: 20px;
           width: 60px;
           height: 100px;
-          border: 3px solid $svetlo_siva;
+          border: 3px solid $svetlo_plava;
           box-shadow: -3px 2px 20px rgba(0, 0, 0, 0.4);
           border-radius: 50px;
           box-sizing: border-box;
@@ -250,7 +250,7 @@ p {
             width: 6px;
             height: 6px;
             margin-left: -3px;
-            background-color: $svetlo_siva;
+            background-color: $svetlo_plava;
             border-radius: 100%;
             animation: scroll-animacija 2s infinite;
             box-sizing: border-box;
@@ -283,11 +283,18 @@ main {
   }
   #projekti-skilovi {
     h3 {
-      color: $svetlo_siva;
+      color: $svetlo_plava;
       font-size: 1.25em;
 
       @include tablet() {
         font-size: 1em;
+      }
+    }
+
+    .neumorphic-tab-container__tab {
+      height: 250px;
+      @include tablet() {
+        height: 400px;
       }
     }
     .neumorphic-progress {
@@ -320,7 +327,7 @@ main {
       }
       .ikonica {
         font-size: 100px;
-        color: $svetlo_siva;
+        color: $svetlo_plava;
       }
     }
   }
@@ -332,7 +339,7 @@ main {
       width: 100%;
     }
     .neumorphic-input {
-      color: $svetlo_siva;
+      color: $svetlo_plava;
       width: 100%;
       font-weight: bold;
       box-shadow: inset 0 0 4px rgba(0, 0, 0, 0),
@@ -363,7 +370,7 @@ main {
       }
     }
     h3 {
-      color: $svetlo_siva;
+      color: $svetlo_plava;
       @include tablet() {
         font-size: 1.5em;
       }
@@ -371,8 +378,11 @@ main {
     .social {
       font-size: 50px;
     }
+    a {
+      color: rgba(65, 67, 69, 0.7);
+    }
     a:hover {
-      color: $svetlo_siva;
+      color: $svetlo_plava;
     }
   }
 }
@@ -397,7 +407,7 @@ main {
 }
 
 .neumorphic-tab-container__control {
-  color: $svetlo_siva;
+  color: $svetlo_plava;
 
   @include tablet() {
     font-size: 0.9em;
@@ -405,7 +415,7 @@ main {
   }
 }
 .neumorphic-tab-container__control_active {
-  color: lighten($color: $svetlo_siva, $amount: 40%);
+  color: lighten($color: $svetlo_plava, $amount: 40%);
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0),
     inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000;
 }
@@ -470,29 +480,28 @@ $width60: 60%;
   }
 
   &.js {
-    width: $width80;
-    animation: sliding80;
+    width: $width90;
+    animation: sliding90;
   }
 
   &.php {
-    width: $width80;
-    animation: sliding80;
+    @extend .js;
   }
 
   &.wp {
-    width: $width70;
-    animation: sliding70;
+    width: $width80;
+    animation: sliding80;
   }
   &.ps {
     @extend .wp;
   }
   &.linux {
-    width: $width60;
-    animation: sliding60;
+    width: $width70;
+    animation: sliding70;
   }
 }
 .neumorphic-inner div {
-  color: lighten($color: $svetlo_siva, $amount: 40%);
+  color: lighten($color: $svetlo_plava, $amount: 40%);
   font-size: 1.15em;
 }
 
@@ -533,7 +542,7 @@ textarea {
   border: none;
   padding: 10px 40px;
   border-radius: 40px;
-  color: $svetlo_siva;
+  color: $svetlo_plava;
   background-color: var(--back-color);
   /*box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.3), 
 				-2px -2px 4px 2px rgba(255, 255, 255, 1), 
