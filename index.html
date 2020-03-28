@@ -132,7 +132,7 @@
                   HelloWorld
                 </div>
                 <div
-                  class="neumorphic-tab-container__control  l4"
+                  class="neumorphic-tab-container__control"
                   data-target="limos4"
                 >
                   Limos4
@@ -151,18 +151,18 @@
                 </div>
                 
                 <div
-                  class="neumorphic-tab-container__control"
+                  class="neumorphic-tab-container__control skriveni"
                   data-target="secret"
                 >
-                  ?
+                  &nbsp;&nbsp;?&nbsp;&nbsp;
                 </div>
               </div>
               <div
-                class="neumorphic-inner neumorphic-tab-container__tab  l4"
+                class="neumorphic-inner neumorphic-tab-container__tab"
                 id="limos4"
               >
                 <div class="row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 text-center">
                     <a href="https://www.limos4.com" target="_blank">
                       <image
                         class="neumorphic-image"
@@ -172,7 +172,7 @@
                     </a>
                   </div>
                   <div class="col-lg-8">
-                    <div class="pb-2  text-left">
+                    <div class="pb-2 pt-3 pt-md-0 text-justify text-md-left">
                         Limos4 pruža vrhunsku uslugu limuzina, transfere do aerodroma i brodskih luka u celom svetu.
                     </div>
                   </div>
@@ -183,7 +183,7 @@
                 id="fototasic"
               >
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center">
                   <a href="https://www.fototasic.rs" target="_blank">
                     <image
                       class="neumorphic-image"
@@ -193,7 +193,7 @@
                   </a>
                 </div>
                 <div class="col-lg-8">
-                  <div class="pb-2  text-left">
+                  <div class="pb-2 pt-3 pt-md-0 text-justify text-md-left">
                     Najbolji fotografski tim u rasinskom okrugu sada ima i svoj sajt. Mlad i talentovan tim će zabeležiti Vaš svaki značajan trenutak.
                   </div>
                 </div>
@@ -206,7 +206,7 @@
                 id="penthouse"
               >
                 <div class="row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 text-center">
                     <a href="https://www.penthouse.rs"></a>
                     <image
                       class="neumorphic-image"
@@ -215,7 +215,7 @@
                     />
                   </div>
                   <div class="col-lg-8">
-                    <div class="pb-2  text-left">
+                    <div class="pb-2 pt-3 pt-md-0 text-justify text-md-left">
                       Sajt o moderno uređenom penthausu u Kruševcu. Apartman se nalazi u samom centru grada.
                     </div>
                   </div>
@@ -226,7 +226,7 @@
                 id="helloworld"
               >
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center">
                   <a href="https://www.helloworld.milosh.rs" target="_blank">
                     <image
                       class="neumorphic-image"
@@ -236,7 +236,7 @@
                   </a>
                 </div>
                 <div class="col-lg-8">
-                  <div class="pb-2  text-left">
+                  <div class="pb-2 pt-3 pt-md-0 text-justify text-md-left">
                     Ovo je moj završni rad na Visokim studijama 2020. godine. Sajt sa CMS sistemom i implementacijom Paypal plaćanja.
                   </div>
                 </div>
@@ -245,7 +245,7 @@
                 
               </div>
               <div
-                class="neumorphic-inner neumorphic-tab-container__tab"
+                class="neumorphic-inner neumorphic-tab-container__tab skriveni"
                 id="secret"
               >
           <div class="row">
@@ -357,10 +357,10 @@
           <div class="col-lg-8 mt-5 text-center tekst-footera">
             <h3>Bez obzira da li ste zainteresovani da radite sa mnom ili samo želite da me kontaktirate, rado ću Vam odgovoriti!</h3>
             <div class="w-100 social">
-              <a href="https://twitter.com/pcgenius98"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              <a href="https://facebook.com/milos037"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              <a href="mailto:info@milosh.rs"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-              <a href="https://codepen.io/milos_ks"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/pcgenius98" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="https://facebook.com/milos037" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="mailto:info@milosh.rs" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+              <a href="https://codepen.io/milos_ks" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -423,7 +423,7 @@
                     setTimeout(function(){
                       $(".forma").hide();
                       $(".tekst-footera").addClass('offset-md-2');
-                      $(".tekst-footera h3").html("Hvala što ste me kontaktirali.<br>Odgovoriću Vam u što je moguće kraćem roku.")
+                      $(".tekst-footera h3").html("Hvala Vam što ste me kontaktirali.<br>Odgovoriću Vam u što je moguće kraćem roku.")
                     }, 2000)
                     
                     
@@ -454,9 +454,8 @@
           $("#fp-nav ul li:nth-child(2) a").click();
         });
         }else {
-          
+          // $(".skriveni").hide();
           $(".link-za-kontakt").attr("href", "#forma");
-       
         }
         
       });

@@ -385,8 +385,11 @@ main #projekti-skilovi .neumorphic-progress {
 }
 
 @media (max-width: 768px) {
-  main #projekti-skilovi .projekti .l4 {
-    display: none;
+  main #projekti-skilovi .projekti {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.8em;
   }
 }
 

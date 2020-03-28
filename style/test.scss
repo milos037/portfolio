@@ -299,9 +299,8 @@ main {
         padding: 10px;
       }
       @include tablet() {
-        .l4 {
-          display: none;
-        }
+        align-items: center;
+        font-size: 0.8em;
       }
     }
   }
