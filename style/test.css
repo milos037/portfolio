@@ -382,6 +382,9 @@ main #projekti-skilovi .neumorphic-progress {
   main #projekti-skilovi .projekti {
     padding: 10px;
   }
+}
+
+@media (max-width: 768px) {
   main #projekti-skilovi .projekti .l4 {
     display: none;
   }
@@ -414,10 +417,12 @@ main #forma .neumorphic-card {
   -webkit-box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
           box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
   text-align: center;
+  width: 100%;
 }
 
 main #forma .neumorphic-input {
   color: #6d6d6d;
+  width: 100%;
   font-weight: bold;
   -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0), inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;
           box-shadow: inset 0 0 4px rgba(0, 0, 0, 0), inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000, 0 0 4px rgba(255, 255, 255, 0.2) !important;

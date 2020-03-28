@@ -297,7 +297,8 @@ main {
     .projekti {
       @include mobile() {
         padding: 10px;
-
+      }
+      @include tablet() {
         .l4 {
           display: none;
         }
@@ -329,9 +330,11 @@ main {
       box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15), -7px -7px 20px #000,
         0 0 4px rgba(255, 255, 255, 0.2) !important;
       text-align: center;
+      width: 100%;
     }
     .neumorphic-input {
       color: $svetlo_siva;
+      width: 100%;
       font-weight: bold;
       box-shadow: inset 0 0 4px rgba(0, 0, 0, 0),
         inset 7px 7px 15px rgba(0, 0, 0, 0.15), inset -7px -7px 20px #000,

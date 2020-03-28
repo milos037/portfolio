@@ -173,7 +173,7 @@
                   </div>
                   <div class="col-lg-8">
                     <div class="pb-2  text-left">
-                      Limos4 pruža vrhunsku uslugu limuzina, transfere do aerodroma i krstarenje lukama po Evropi. Potpuno novi vozni park Mercedes vozila i obučenih vozača.
+                        Limos4 pruža vrhunsku uslugu limuzina, transfere do aerodroma i brodskih luka u celom svetu.
                     </div>
                   </div>
                 </div>
@@ -194,7 +194,7 @@
                 </div>
                 <div class="col-lg-8">
                   <div class="pb-2  text-left">
-                    Najbolji fotografski tim u Srbiji. Mlad i talentovan tim će zabeležiti Vaš svaki značajan trenutak.
+                    Najbolji fotografski tim u rasinskom okrugu sada ima i svoj sajt. Mlad i talentovan tim će zabeležiti Vaš svaki značajan trenutak.
                   </div>
                 </div>
               </div>
@@ -216,7 +216,7 @@
                   </div>
                   <div class="col-lg-8">
                     <div class="pb-2  text-left">
-                      Ovaj penthaus u novogradnji je moderno uređen i kompletno opremljen, u zgradi koja se nalazi u samom centru grada Kruševca.
+                      Sajt o moderno uređenom penthausu u Kruševcu. Apartman se nalazi u samom centru grada.
                     </div>
                   </div>
                 </div>                
@@ -237,7 +237,7 @@
                 </div>
                 <div class="col-lg-8">
                   <div class="pb-2  text-left">
-                    Prodaja računara i računarske opreme, vrši servis i prodaju kompjutera u Kruševcu
+                    Ovo je moj završni rad na Visokim studijama 2020. godine. Sajt sa CMS sistemom i implementacijom Paypal plaćanja.
                   </div>
                 </div>
               </div>
@@ -444,13 +444,21 @@
             navigationPosition: "right",
             resposnive: 1000
           });
-        }
-        $(".link-za-kontakt").on("click tap", function() {
+
+          $(".link-za-kontakt").attr("href", "javascript:;");
+
+          $(".link-za-kontakt").on("click tap", function() {
           $("#fp-nav ul li:nth-child(5) a").click();
         });
         $(".link-za-o-meni").on("click tap", function() {
           $("#fp-nav ul li:nth-child(2) a").click();
         });
+        }else {
+          
+          $(".link-za-kontakt").attr("href", "#forma");
+       
+        }
+        
       });
     </script>
     <script>
