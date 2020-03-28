@@ -170,6 +170,12 @@ p {
   font-size: 1.5em;
 }
 
+@media (max-width: 768px) {
+  p {
+    font-size: 1em;
+  }
+}
+
 .error {
   background: #ff00003d !important;
 }
@@ -284,6 +290,12 @@ p {
   background-clip: text;
 }
 
+@media (max-width: 768px) {
+  .waveWrapper div.text h1 {
+    font-size: 3em;
+  }
+}
+
 .waveWrapper div.text h1 .izdvoji {
   color: rgba(255, 255, 255, 0.2);
 }
@@ -291,6 +303,12 @@ p {
 .waveWrapper div.text h1 a {
   padding-top: 60px;
   cursor: default;
+}
+
+@media (max-width: 768px) {
+  .waveWrapper div.text h1 a {
+    display: none;
+  }
 }
 
 .waveWrapper div.text h1 a span {
@@ -338,13 +356,35 @@ main section:not(:first-child)#o-meni img {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  main section:not(:first-child)#o-meni img {
+    width: 120px;
+    margin-top: 1rem;
+  }
+}
+
 main #projekti-skilovi h3 {
   color: #6d6d6d;
   font-size: 1.25em;
 }
 
+@media (max-width: 768px) {
+  main #projekti-skilovi h3 {
+    font-size: 1em;
+  }
+}
+
 main #projekti-skilovi .neumorphic-progress {
   margin-bottom: 20px;
+}
+
+@media (max-width: 414px) {
+  main #projekti-skilovi .projekti {
+    padding: 10px;
+  }
+  main #projekti-skilovi .projekti .l4 {
+    display: none;
+  }
 }
 
 main #prednosti .neumorphic-card__outer {
@@ -359,10 +399,15 @@ main #prednosti .neumorphic-image {
   padding: 0;
 }
 
+@media (max-width: 768px) {
+  main #prednosti .neumorphic-image {
+    width: 100%;
+  }
+}
+
 main #prednosti .neumorphic-image .ikonica {
   font-size: 100px;
   color: #6d6d6d;
-  text-shadow: -1px 2px 5px rgba(65, 67, 69, 0.3);
 }
 
 main #forma .neumorphic-card {
@@ -406,6 +451,12 @@ main #forma h3 {
   color: #6d6d6d;
 }
 
+@media (max-width: 768px) {
+  main #forma h3 {
+    font-size: 1.5em;
+  }
+}
+
 main #forma .social {
   font-size: 50px;
 }
@@ -425,12 +476,26 @@ main #forma a:hover {
 }
 
 .neumorphic-image {
-  width: 200px;
+  width: 100%;
   height: 174px;
+}
+
+@media (max-width: 768px) {
+  .neumorphic-image {
+    width: 200px;
+    text-align: center;
+  }
 }
 
 .neumorphic-tab-container__control {
   color: #6d6d6d;
+}
+
+@media (max-width: 768px) {
+  .neumorphic-tab-container__control {
+    font-size: 0.9em;
+    padding: 5px;
+  }
 }
 
 .neumorphic-tab-container__control_active {
@@ -571,6 +636,12 @@ main #forma a:hover {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+}
+
+@media (max-width: 768px) {
+  .neumorphic-card {
+    width: 100%;
+  }
 }
 
 .neumorphic-input {

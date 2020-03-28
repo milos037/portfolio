@@ -1,5 +1,16 @@
 $svetlo_siva: #6d6d6d;
-
+$tablet: 768px;
+$mobile: 414px;
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
 @import url("https://fonts.googleapis.com/css?family=Rubik:900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -98,6 +109,9 @@ h3 {
 }
 p {
   font-size: 1.5em;
+  @include tablet() {
+    font-size: 1em;
+  }
 }
 .error {
   background: #ff00003d !important;
@@ -200,6 +214,10 @@ p {
       -moz-background-clip: text;
       background-clip: text;
 
+      @include tablet() {
+        font-size: 3em;
+      }
+
       .izdvoji {
         color: rgba(255, 255, 255, 0.2);
       }
@@ -207,6 +225,10 @@ p {
       a {
         padding-top: 60px;
         cursor: default;
+
+        @include tablet() {
+          display: none;
+        }
 
         span {
           display: block;
@@ -251,6 +273,11 @@ main {
       img {
         width: 200px;
         margin: 0 auto;
+
+        @include tablet() {
+          width: 120px;
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -258,9 +285,23 @@ main {
     h3 {
       color: $svetlo_siva;
       font-size: 1.25em;
+
+      @include tablet() {
+        font-size: 1em;
+      }
     }
     .neumorphic-progress {
       margin-bottom: 20px;
+    }
+
+    .projekti {
+      @include mobile() {
+        padding: 10px;
+
+        .l4 {
+          display: none;
+        }
+      }
     }
   }
   #prednosti {
@@ -273,10 +314,13 @@ main {
       height: 100px;
       text-align: center;
       padding: 0;
+
+      @include tablet() {
+        width: 100%;
+      }
       .ikonica {
         font-size: 100px;
         color: $svetlo_siva;
-        text-shadow: -1px 2px 5px rgba(65, 67, 69, 0.3);
       }
     }
   }
@@ -318,6 +362,9 @@ main {
     }
     h3 {
       color: $svetlo_siva;
+      @include tablet() {
+        font-size: 1.5em;
+      }
     }
     .social {
       font-size: 50px;
@@ -339,12 +386,21 @@ main {
     0 0 4px rgba(255, 255, 255, 0.2) !important;
 }
 .neumorphic-image {
-  width: 200px;
+  width: 100%;
   height: 174px;
+  @include tablet() {
+    width: 200px;
+    text-align: center;
+  }
 }
 
 .neumorphic-tab-container__control {
   color: $svetlo_siva;
+
+  @include tablet() {
+    font-size: 0.9em;
+    padding: 5px;
+  }
 }
 .neumorphic-tab-container__control_active {
   color: lighten($color: $svetlo_siva, $amount: 40%);
@@ -448,6 +504,9 @@ $width60: 60%;
   border-radius: 30px;
   //   max-width: 300px;
   width: min-content;
+  @include tablet() {
+    width: 100%;
+  }
 }
 .neumorphic-input {
   background-color: var(--back-color);
