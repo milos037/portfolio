@@ -334,7 +334,7 @@
         <div class="row align-items-center">
           <div class="col-lg-4 order-last order-lg-first my-5 forma" style="animation-duration: 3s;">
             <div class="neumorphic-card mx-auto">
-              <form name="contact" method="POST" data-netlify="true" autocomplete="off">
+              <form name="contact" method="POST" data-netlify="true" id="contact_form" autocomplete="off">
               <input
                 class="neumorphic-input"
                 id="ime_prezime"
@@ -421,32 +421,23 @@
       
             if(validator()){
               
-              setTimeout(function(){
+              
+              let myForm = document.getElementById('contact_form');
+              let formData = new FormData(myForm)
+              fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+              }).then(() => {
+                setTimeout(function(){
                       $(".forma").hide();
                       $(".tekst-footera").addClass('offset-md-2');
                       $(".tekst-footera h3").html("Hvala Vam što ste me kontaktirali.<br>Odgovoriću Vam u što je moguće kraćem roku.")
                     }, 2000)
+              }).catch((error) =>
+                console.log(error))
 
-              //  $.ajax({
-              //     url: "phpmailer/kontakt.php",
-              //     method: "POST",
-              //     dataType: "json",
-              //     data: { ime_prezime : ime_prezime, poruka : poruka, email : email},
-              //     error: function () {
-              //       $(".forma").addClass('animated fadeOutLeft');
-              //       setTimeout(function(){
-              //         $(".forma").hide();
-              //         $(".tekst-footera").addClass('offset-md-2');
-              //         $(".tekst-footera h3").html("Hvala Vam što ste me kontaktirali.<br>Odgovoriću Vam u što je moguće kraćem roku.")
-              //       }, 2000)
-                    
-                    
-                    
-              //     },
-              //     success: function(){ 
-              //       $('.forma').addClass("shake");
-              //     }
-              //  });   
+         
             }
          });
       </script>
