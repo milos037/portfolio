@@ -334,16 +334,18 @@
         <div class="row align-items-center">
           <div class="col-lg-4 order-last order-lg-first my-5 forma" style="animation-duration: 3s;">
             <div class="neumorphic-card mx-auto">
-              <form name="contact" method="POST" netlify autocomplete="off">
+              <form name="contact" method="POST" data-netlify="true" autocomplete="off">
               <input
                 class="neumorphic-input"
                 id="ime_prezime"
+                name="name"
                 type="text"
                 placeholder="Ime i prezime"
               />
               <input
                 class="neumorphic-input"
                 id="email"
+                name="email"
                 type="email"
                 placeholder="Email"
               />
@@ -351,6 +353,7 @@
                 class="neumorphic-input"
                 id="poruka"
                 placeholder="Poruka"
+                name="message"
               ></textarea>
 
               <button type="button" id="submit-form" class="btn neumorphic-btn mt-5 mb-3 mx-auto">
