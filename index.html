@@ -12,7 +12,7 @@
       href="images/milos-logo.png"
       type="image/x-icon"
     />
-    <title>Moj Portfolio123</title>
+    <title>Moj Portfolio</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -334,7 +334,7 @@
         <div class="row align-items-center">
           <div class="col-lg-4 order-last order-lg-first my-5 forma" style="animation-duration: 3s;">
             <div class="neumorphic-card mx-auto">
-              <form action="" method="POST" autocomplete="off">
+              <form name="contact" method="POST" netlify autocomplete="off">
               <input
                 class="neumorphic-input"
                 id="ime_prezime"
@@ -418,26 +418,32 @@
       
             if(validator()){
               
-               $.ajax({
-                  url: "phpmailer/kontakt.php",
-                  method: "POST",
-                  dataType: "json",
-                  data: { ime_prezime : ime_prezime, poruka : poruka, email : email},
-                  error: function () {
-                    $(".forma").addClass('animated fadeOutLeft');
-                    setTimeout(function(){
+              setTimeout(function(){
                       $(".forma").hide();
                       $(".tekst-footera").addClass('offset-md-2');
                       $(".tekst-footera h3").html("Hvala Vam što ste me kontaktirali.<br>Odgovoriću Vam u što je moguće kraćem roku.")
                     }, 2000)
+
+              //  $.ajax({
+              //     url: "phpmailer/kontakt.php",
+              //     method: "POST",
+              //     dataType: "json",
+              //     data: { ime_prezime : ime_prezime, poruka : poruka, email : email},
+              //     error: function () {
+              //       $(".forma").addClass('animated fadeOutLeft');
+              //       setTimeout(function(){
+              //         $(".forma").hide();
+              //         $(".tekst-footera").addClass('offset-md-2');
+              //         $(".tekst-footera h3").html("Hvala Vam što ste me kontaktirali.<br>Odgovoriću Vam u što je moguće kraćem roku.")
+              //       }, 2000)
                     
                     
                     
-                  },
-                  success: function(){ 
-                    $('.forma').addClass("shake");
-                  }
-               });   
+              //     },
+              //     success: function(){ 
+              //       $('.forma').addClass("shake");
+              //     }
+              //  });   
             }
          });
       </script>
