@@ -3,8 +3,6 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="alternate" hreflang="en" href="https://www.milosh.rs" />
-    <link rel="alternate" hreflang="sr" href="https://www.milosh.rs/en/" />
     <meta name="description" content="Pravljenje Web sajtova, Web aplikacija, CMS sistema sa najmodernijim pristupom.">
     <meta name="keywords" content="pravljenje web sajtova, izrada cms sistema, front end, back end, full stack developer">
     <link
@@ -334,7 +332,10 @@
         <div class="row align-items-center">
           <div class="col-lg-4 order-last order-lg-first my-5 forma" style="animation-duration: 3s;">
             <div class="neumorphic-card mx-auto">
-              <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" id="contact_form" autocomplete="off">
+              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact_form" autocomplete="off">\
+                <p class="hidden">
+                  <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                </p>
               <input
                 class="neumorphic-input"
                 id="ime_prezime"
