@@ -334,7 +334,7 @@
         <div class="row align-items-center">
           <div class="col-lg-4 order-last order-lg-first my-5 forma" style="animation-duration: 3s;">
             <div class="neumorphic-card mx-auto">
-              <form name="contact" method="POST" data-netlify="true" id="contact_form" autocomplete="off">
+              <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" id="contact_form" autocomplete="off">
               <input
                 class="neumorphic-input"
                 id="ime_prezime"
@@ -355,7 +355,7 @@
                 placeholder="Poruka"
                 name="message"
               ></textarea>
-
+              <div data-netlify-recaptcha="true"></div>
               <button type="button" id="submit-form" class="btn neumorphic-btn mt-5 mb-3 mx-auto">
                 Pošalji
               </button>
